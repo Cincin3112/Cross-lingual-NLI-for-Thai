@@ -1,13 +1,13 @@
 # Cross-lingual-NLI-for-Thai
 
-##Introduction
+## Introduction
 
-##Approach & Methodology
+## Approach & Methodology
 
-##Dataset
+## Dataset
 
-##Experiment Setup
+## Experiment Setup
 
-##Results
+## Results
 
-##Conclusion
+## Conclusion
