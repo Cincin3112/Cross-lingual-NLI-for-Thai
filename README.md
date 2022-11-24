@@ -24,7 +24,8 @@ We collect premises from Twitter by scraping Tweets using TWINT lybrary in Pytho
 | account1 | 300 | 120 |
 | account2 | 300 | 130 |
 | account3 | 60 | 33 |
-    Summary : 352 Tweets
+
+Summary : 352 Tweets
 
 ### Annotation guidelines
 
