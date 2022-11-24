@@ -15,7 +15,7 @@
 
 ## Dataset
 ### Data Collection
-     We collect premises from Twitter by scraping Tweets using TWINT lybrary in Python. The Tweets are from hashtags and accounts about news and general topics. Then, we cleaned irrelavant tweets (ads, spams, links, English tweets, emojis etc.)
+We collect premises from Twitter by scraping Tweets using TWINT lybrary in Python. The Tweets are from hashtags and accounts about news and general topics. Then, we cleaned irrelavant tweets (ads, spams, links, English tweets, emojis etc.)
 | hashtags / accounts | Raw Tweets | Cleaned Tweets|
 |---------------------|------------|---------------|
 | #โหนกระแส |  302 | 32 |
@@ -29,7 +29,7 @@
 ### Annotation guidelines
 
 ### Result
-    We got data of 1056 pairs of premises and hypothesis with relations as labels (Entailment / Contradiction / Neutral) translated into English and Chinese. 
+We got data of 1056 pairs of premises and hypothesis with relations as labels (Entailment / Contradiction / Neutral) translated into English and Chinese. 
 
 ### Label distribution (w/table)
 | Label | Premise | Hypothesis|
