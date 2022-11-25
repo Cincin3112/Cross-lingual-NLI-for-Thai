@@ -61,11 +61,11 @@ We got data of 1056 pairs of premises and hypothesis with relations as labels (E
 
 
 ## Results
-| Model | Train Language | Test Language | F1 Score |
-|-------|----------------|---------------|----------|
-| WangchanBERTa| Thai | Thai | |
-| Multilingual BERT | Thai | Thai | |
-| Multilingual BERT | | Thai | |
+| Model | Train Language | F1 Score |
+|-------|----------------|----------|
+| WangchanBERTa| Thai | 0.30 |
+| Multilingual BERT | Thai | 0.28 |
+| Multilingual BERT | Thai-English-Chinese | 0.37 |
 
 ### How did it go? + Interpret results (which one is the best with explaination; read the table to reinforce the result)
 
