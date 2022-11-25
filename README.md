@@ -4,7 +4,7 @@
 ### Motivation
 Natural Language Inference (NLI) is one of the most important fields of NLP as it can be developed to help in many use cases like automatic auditing, improving search engine, question answering or sentence paraphrasing in various of domains such as banking, retail, finance etc. However, there are still not so many work of NLI in Thai language. Besides, the datasets from crowdsourcing which are often used to train the model for NLI still face many problems of artifacts. Therefore, we would like to train model to do the NLI task in Thai language including using the dataset with the least artifacts as possible.
 
-Moreover, we also want to try implementing the Cross-Lingual Data Augmentation method on our project, as Thai language is among the Low-resources Languages, which means there are not as many data for the language to be used in training AI as other High-resources Languages like English or Chinese.
+Moreover, we also want to try implementing the Cross-Lingual Data Augmentation method on our project, as Thai language is among the relatively Low-resources Languages, which means there are not as many data for the language to be used in training AI as other High-resources Languages like English or Chinese.
 
 ### Review of Literature
 - Cross-Lingual Data Augmentation for NLI
@@ -43,11 +43,26 @@ We collect premises from Twitter by scraping Tweets using TWINT lybrary in Pytho
 Summary : 352 Tweets
 
 ### Annotation guidelines
+We generated the hypothesis to the premises we got from Twitter according to this guideline.
 
-### Result
-We got data of 1056 pairs of premises and hypothesis with relations as labels (Entailment / Contradiction / Neutral) translated into English and Chinese. 
+Entailment: h is definitely true when p is true
+- Do not just change the noun with their hypernym nor the number. Try to change the verb.
+- Do not just cut out the modifier part of the sentence. Try to change the formation.
 
-### Label distribution (w/table)
+Contradiction: h is definitely not true when p is true
+- Do not just add the negation and/or change the number.
+- If the negation is added and/or the number is changed, change the verb, too.
+
+Neutral: h might be true or not when p is true
+- Do not just add the modifier part and/or superlative to the sentence.
+- Try to change the matter within the topic of premise.
+
+### Data Result
+We got data of 1056 pairs of premises and hypothesis with relations as labels (Entailment / Contradiction / Neutral) translated into English and Chinese using Google Translation. 
+
+### Label distribution
+The labels are distributed according to types of inference which are "Entailment", "Contradiction" and "Neutral"
+
 | Label | Premise | Hypothesis|
 |-------|---------|-----------|
 | Entailment | 1760 | 1760 |
@@ -55,7 +70,11 @@ We got data of 1056 pairs of premises and hypothesis with relations as labels (E
 | Neutral | 1757 | 1757 |
 
 ## Experiment Setup
-### Which pre-trained model? How did you pre-train embeddings?
+We prepared a dataset for Thai-only NLI and the cross-lingual augmented dataset by replacing some segments of the original Thai input texts with the translation in English and Chinese.
+
+### Pre-trained Model
+We used WangchanBERTa[Lowphansirikul et al. 2021], the pretraining transformer-based Thai Language Models for Thai-only data as the baseline. Then, we used mBERT[Devlin et al., 2019], the BERT-based multilingual language model that includes Thai, English and Chinese for Thai-only and cross-lingual augmented data in Thai-English-Chinese.
+
 ### How long?
 ### Hyperparameter tuning? Dropout? How many epochs?
 
