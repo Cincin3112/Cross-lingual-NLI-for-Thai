@@ -67,7 +67,7 @@ The labels are distributed according to types of inference which are "Entailment
 |-------|---------|-----------|
 | Entailment | 1760 | 1760 |
 | Contradiction | 1760 | 1760 |
-| Neutral | 1757 | 1757 |
+| Neutral | 1760 | 1760 |
 
 ## Experiment Setup
 We prepared a dataset for Thai-only NLI and the cross-lingual augmented dataset by replacing some segments of the original Thai input texts with the translation in English and Chinese.
@@ -75,7 +75,12 @@ We prepared a dataset for Thai-only NLI and the cross-lingual augmented dataset 
 ### Pre-trained Model
 We used WangchanBERTa[Lowphansirikul et al. 2021], the pretraining transformer-based Thai Language Models for Thai-only data as the baseline. Then, we used mBERT[Devlin et al., 2019], the BERT-based multilingual language model that includes Thai, English and Chinese for Thai-only and cross-lingual augmented data in Thai-English-Chinese.
 
-### How long?
+| Model | Train Language | Time usage |
+|-------|----------------|------------|
+| WangchanBERTa| Thai |  |
+| Multilingual BERT | Thai |  2 m 30 s |
+| Multilingual BERT | Thai-English-Chinese | 10 m |
+
 ### Hyperparameter tuning? Dropout? How many epochs?
 
 
@@ -83,8 +88,8 @@ We used WangchanBERTa[Lowphansirikul et al. 2021], the pretraining transformer-b
 | Model | Train Language | F1 Score |
 |-------|----------------|----------|
 | WangchanBERTa| Thai | 0.30 |
-| Multilingual BERT | Thai | 0.28 |
-| Multilingual BERT | Thai-English-Chinese | 0.37 |
+| Multilingual BERT | Thai | 0.40 |
+| Multilingual BERT | Thai-English-Chinese | 0.58 |
 
 ### How did it go? + Interpret results (which one is the best with explaination; read the table to reinforce the result)
 
