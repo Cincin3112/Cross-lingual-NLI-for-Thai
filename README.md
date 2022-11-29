@@ -85,11 +85,17 @@ We used WangchanBERTa[Lowphansirikul et al. 2021], the pretraining transformer-b
 
 
 ## Results
-| Model | Train Language | F1 Score |
-|-------|----------------|----------|
-| WangchanBERTa| Thai | 0.30 |
-| Multilingual BERT | Thai | 0.40 |
-| Multilingual BERT | Thai-English-Chinese | 0.58 |
+| Model | Train Language | epochs |F1 Score |
+|-------|----------------|--------|----------|
+| WangchanBERTa| Thai | 3 | 0.30 |
+| XLM RoBERTa large | Thai | 3 | |
+| XLM RoBERTa large | Thai-English-Chinese | 3 | |
+| Multilingual BERT | Thai | 5 | 0.43 |
+| Multilingual BERT | Thai-English | 5 | 0.43 |
+| Multilingual BERT | Thai-Chinese | 5 | 0.48 |
+| Multilingual BERT | Thai-English-Chinese | 5 | 0.49 |
+| Multilingual BERT | Thai-English-Chinese | 10 | 0.71 |
+| Multilingual BERT | Thai-English-Chinese | 15 | 0.74 |
 
 ### How did it go? + Interpret results (which one is the best with explaination; read the table to reinforce the result)
 
