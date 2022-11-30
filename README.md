@@ -58,14 +58,14 @@ Neutral: h might be true or not when p is true
 
 ### Data Result
 We got data of 1056 pairs of premises and hypotheses with relations as labels (Entailment/ Contradiction/ Neutral), then we translated them into Chinese and English, which resulted in a total of 5280 pairs. We selected 200 pairs of Thai premises and hypotheses for the test set. In total, we have a train set of 5080 pairs divided by label as follows:
-Train set
+#####Train set
 | Label | Premise | Hypothesis|
 |-------|---------|-----------|
 | Entailment | 1693 | 1693 |
 | Contradiction | 1694 | 1694 |
 | Neutral | 1693 | 1693 |
 
-Test set
+#####Test set
 | Label | Premise | Hypothesis|
 |-------|---------|-----------|
 | Entailment | 67 | 67 |
@@ -83,7 +83,7 @@ We used WangchanBERTa [Lowphansirikul et al. 2021], the pretraining transformer-
 | WangchanBERTa     |  Thai   |               |            |        |            |
 | XLM RoBERTa base |  Thai    |               |            |        |            |
 | XLM RoBERTa base | Thai-English |    8e-6   | 16         | 12     | 10m        |
-| XLM RoBERTa base | Thai-Chinese | 8e-6      | 24         | 15     | 8m 30s     |
+| XLM RoBERTa base | Thai-Chinese | 8e-6      | 24         | 15     | 9m 55s     |
 | XLM RoBERTa base |  Thai-English-Chinese | 8e-6 | 16     | 12     | 21m        |
 | Multilingual BERT |  Thai   |               |            |        |     2m 30s |
 | Multilingual BERT | Thai-English |          |            |        |            |
@@ -91,13 +91,13 @@ We used WangchanBERTa [Lowphansirikul et al. 2021], the pretraining transformer-
 | Multilingual BERT | Thai-English-Chinese |  |            |        |10 m        |
 
 ## Results
-###Model comparison
+### Model comparison
 | Model | Dataset |F1 Score |
 |-------|---------|---------|
 | WangchanBERTa| Thai | 0.38 |
 | XLM RoBERTa base | Thai | |
 | XLM RoBERTa base | Thai-English | 0.55 |
-| XLM RoBERTa base | Thai-Chinese | |
+| XLM RoBERTa base | Thai-Chinese | 0.49 |
 | XLM RoBERTa base | Thai-English-Chinese | 0.87 |
 | Multilingual BERT | Thai | 0.43 |
 | Multilingual BERT | Thai-English | 0.43 |
