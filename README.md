@@ -101,6 +101,7 @@ We used WangchanBERTa [Lowphansirikul et al. 2021], the pretraining transformer-
 | XLM RoBERTa base | Thai-Chinese | 0.49 |
 | XLM RoBERTa base | Thai-English-Chinese | **0.87** |
 | Multilingual BERT | Thai | 0.39 |
+<<<<<<< HEAD
 | Multilingual BERT | Thai-English | 0.43 |
 | Multilingual BERT | Thai-Chinese | 0.48 |
 | Multilingual BERT | Thai-English-Chinese | **0.88** |
@@ -115,6 +116,11 @@ We used WangchanBERTa [Lowphansirikul et al. 2021], the pretraining transformer-
 | Multilingual BERT | Thai-Chinese | 0.49 |
 >>>>>>> a709b2320873a2ce52633b9484493749ba37f192
 | Multilingual BERT | Thai-English-Chinese | 0.88 |
+=======
+| Multilingual BERT | Thai-English | 0.51 |
+| Multilingual BERT | Thai-Chinese | 0.49 |
+| Multilingual BERT | Thai-English-Chinese | **0.88** |
+>>>>>>> 82b6b5a72c6d0e5c4c88a58af62ca4cda7fa05a8
 
 According to the table, models using cross-lingual dataset from both high-resource languages give better results than those using Thai-only dataset or cross-lingual dataset using only one high-resource language. The reason is that cross-lingual data augmentation give more amount of data to train the models which leads to better efficiency of the models just like Singh et al. (2019) said in their research. For the model, XLM RoBERTa base and Multilingual BERT has the best F1 score among  at 0.87.
 
