@@ -84,7 +84,6 @@ We used WangchanBERTa [Lowphansirikul et al. 2021], the pretraining transformer-
 | Model             | Dataset | Learning Rate | Batch Size | Epochs | Time usage |
 |-------------------|---------|---------------|------------|--------|------------|
 | WangchanBERTa     |  Thai   |      4e-5     |     32     |   10   | 2m 22s     |
-| XLM RoBERTa base |  Thai    |      4e-5     |     32     |   6    |            |
 | XLM RoBERTa base | Thai-English |    8e-6   | 16         | 12     | 10m        |
 | XLM RoBERTa base | Thai-Chinese | 8e-6      | 24         | 15     | 9m 55s     |
 | XLM RoBERTa base |  Thai-English-Chinese | 8e-6 | 16     | 12     | 21m        |
@@ -104,10 +103,10 @@ We used WangchanBERTa [Lowphansirikul et al. 2021], the pretraining transformer-
 | XLM RoBERTa base | Thai-English-Chinese | **0.87** |
 | Multilingual BERT | Thai | 0.39 |
 | Multilingual BERT | Thai-English | 0.51 |
-| Multilingual BERT | Thai-Chinese | 0.49 |
+| Multilingual BERT | Thai-Chinese | 0.48 |
 | Multilingual BERT | Thai-English-Chinese | **0.88** |
 
 According to the table, models using cross-lingual dataset from both high-resource languages give better results than those using Thai-only dataset or cross-lingual dataset using only one high-resource language. The reason is that cross-lingual data augmentation give more amount of data to train the models which leads to better efficiency of the models just like Singh et al. (2019) said in their research. For the model, XLM RoBERTa base and Multilingual BERT has the best F1 score at 0.87 and 0.88.
 
 ## Conclusion
-The problem of low-resource languages is lack of data to train language models efficiently. Moreover, huge amount of data annotation requires time, resources and guidelines in order to avoid artifacts or bias in data as much as possible. Also, there are not so many experiments in NLI of Thai language. Therefore, we introduce “Cross-lingual Data Augmentation for Thai NLI Task” by using high-resource languages like English and Chinese as augmenters to help increase the amount of training data making it five times as much as original data in Thai only. This method significantly helps increasing the models efficiency with XLM RoBERTa having the best performance at F1 score of 0.87 following by mBERT at F1 score of 0.74. Both surpassed our monolingual baseline model WangchanBERTa with twice as much F1 score.
+The problem of low-resource languages is lack of data to train language models efficiently. Moreover, huge amount of data annotation requires time, resources and guidelines in order to avoid artifacts or bias in data as much as possible. Also, there are not so many experiments in NLI of Thai language. Therefore, we introduce “Cross-lingual Data Augmentation for Thai NLI Task” by using high-resource languages like English and Chinese as augmenters to help increase the amount of training data making it five times as much as original data in Thai only. This method significantly helps increasing the models efficiency with mBERT having the best performance at F1 score of 0.88 following by XLM roBERTa at F1 score of 0.87. Both surpassed our monolingual baseline model WangchanBERTa with three times as much F1 score.
