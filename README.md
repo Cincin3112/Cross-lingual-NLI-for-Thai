@@ -17,7 +17,7 @@ Gururangan et al. (2018) suggested that the datasets for NLI that are commonly c
 #### Idea Summarization
 The idea of this project is to use the Cross-Lingual Data Augmentation method for Thai NLI while avoiding the common annotation artifacts in training data in order to see the most accurate performance of the model.
 
-The results of our experiments show that Cross-Lingual Data Augmentation method for Thai NLI can significantly improve the efficiency of the models measured with the best F1 score being 0.88 which is more than twice as much as the baseline model.
+The results of our experiments show that Cross-Lingual Data Augmentation method for Thai NLI can significantly improve the efficiency of the models measured with the best F1 score being 0.88 which is about three times as much as the baseline model.
 
 ## Methodology
 ### Input-Output
@@ -84,6 +84,7 @@ We used WangchanBERTa [Lowphansirikul et al. 2021], the pretraining transformer-
 | Model             | Dataset | Learning Rate | Batch Size | Epochs | Time usage |
 |-------------------|---------|---------------|------------|--------|------------|
 | WangchanBERTa     |  Thai   |      4e-5     |     32     |   10   | 2m 22s     |
+| XLM RoBERTa base |  Thai    |      4e-5     |     32     |   6    | 1m  40s    |
 | XLM RoBERTa base | Thai-English |    8e-6   | 16         | 12     | 10m        |
 | XLM RoBERTa base | Thai-Chinese | 8e-6      | 24         | 15     | 9m 55s     |
 | XLM RoBERTa base |  Thai-English-Chinese | 8e-6 | 16     | 12     | 21m        |
