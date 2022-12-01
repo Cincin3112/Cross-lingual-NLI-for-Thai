@@ -58,14 +58,16 @@ Neutral: h might be true or not when p is true
 
 ### Data Result
 We got data of 1056 pairs of premises and hypotheses with relations as labels (Entailment/ Contradiction/ Neutral), then we translated them into Chinese and English, which resulted in a total of 5280 pairs. We selected 200 pairs of Thai premises and hypotheses for the test set. In total, we have a train set of 5080 pairs divided by label as follows:
-#####Train set
+
+##### Train set
 | Label | Premise | Hypothesis|
 |-------|---------|-----------|
 | Entailment | 1693 | 1693 |
 | Contradiction | 1694 | 1694 |
 | Neutral | 1693 | 1693 |
 
-#####Test set
+
+##### Test set
 | Label | Premise | Hypothesis|
 |-------|---------|-----------|
 | Entailment | 67 | 67 |
@@ -85,10 +87,10 @@ We used WangchanBERTa [Lowphansirikul et al. 2021], the pretraining transformer-
 | XLM RoBERTa base | Thai-English |    8e-6   | 16         | 12     | 10m        |
 | XLM RoBERTa base | Thai-Chinese | 8e-6      | 24         | 15     | 9m 55s     |
 | XLM RoBERTa base |  Thai-English-Chinese | 8e-6 | 16     | 12     | 21m        |
-| Multilingual BERT |  Thai   |               |            |        |     2m 30s |
-| Multilingual BERT | Thai-English |          |            |        |            |
-| Multilingual BERT | Thai-Chinese |          |            |        |            |
-| Multilingual BERT | Thai-English-Chinese |  |            |        |10 m        |
+| Multilingual BERT |  Thai   |       8e-6    |      32    |   10    |    5m 56s |
+| Multilingual BERT | Thai-English |     8e-6 |      32     |   10    |  10m 14s |
+| Multilingual BERT | Thai-Chinese |    8e-6  |      32     |   10    |  9m 41s  |
+| Multilingual BERT | Thai-English-Chinese |  8e-6 |    24      |    15    |  40m   |
 
 ## Results
 ### Model comparison
@@ -99,10 +101,10 @@ We used WangchanBERTa [Lowphansirikul et al. 2021], the pretraining transformer-
 | XLM RoBERTa base | Thai-English | 0.55 |
 | XLM RoBERTa base | Thai-Chinese | 0.49 |
 | XLM RoBERTa base | Thai-English-Chinese | 0.87 |
-| Multilingual BERT | Thai | 0.43 |
-| Multilingual BERT | Thai-English | 0.43 |
+| Multilingual BERT | Thai | 0.67 |
+| Multilingual BERT | Thai-English | 0.53 |
 | Multilingual BERT | Thai-Chinese | 0.48 |
-| Multilingual BERT | Thai-English-Chinese | 0.74 |
+| Multilingual BERT | Thai-English-Chinese | 0.88 |
 
 According to the table, models using cross-lingual dataset from both high-resource languages give better results than those using Thai-only dataset or cross-lingual dataset using only one high-resource language. The reason is that cross-lingual data augmentation give more amount of data to train the models which leads to better efficiency of the models just like Singh et al. (2019) said in their research. For the model, XLM RoBERTa base has their best F1 score at 0.87.
 
