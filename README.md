@@ -83,7 +83,7 @@ We used WangchanBERTa [Lowphansirikul et al. 2021], the pretraining transformer-
 
 | Model             | Dataset | Learning Rate | Batch Size | Epochs | Time usage |
 |-------------------|---------|---------------|------------|--------|------------|
-| WangchanBERTa     |  Thai   |      4e-5     |     32     |   10   | 2m 22s     |
+| WangchanBERTa     |  Thai   |      4e-5     |     32     |   10   | 2m 05s     |
 | XLM RoBERTa base |  Thai    |      4e-5     |     32     |   6    | 1m  40s    |
 | XLM RoBERTa base | Thai-English |    8e-6   | 16         | 12     | 10m        |
 | XLM RoBERTa base | Thai-Chinese | 8e-6      | 24         | 15     | 9m 55s     |
@@ -97,7 +97,7 @@ We used WangchanBERTa [Lowphansirikul et al. 2021], the pretraining transformer-
 ### Model comparison
 | Model | Dataset |F1 Score |
 |-------|---------|---------|
-| WangchanBERTa| Thai | 0.25 |
+| WangchanBERTa| Thai | 0.23 |
 | XLM RoBERTa base | Thai | 0.28  |
 | XLM RoBERTa base | Thai-English | 0.55 |
 | XLM RoBERTa base | Thai-Chinese | 0.49 |
