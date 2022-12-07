@@ -83,29 +83,29 @@ We used WangchanBERTa [Lowphansirikul et al. 2021], the pretraining transformer-
 
 | Model             | Dataset | Learning Rate | Batch Size | Epochs | Time usage |
 |-------------------|---------|---------------|------------|--------|------------|
-| WangchanBERTa     |  Thai   |      4e-5     |     32     |   10   | 2m 05s     |
-| XLM RoBERTa base |  Thai    |      4e-5     |     32     |   6    | 1m  40s    |
+| WangchanBERTa     |  Thai   |      4e-5     |     32     |   10   | 02m 05s     |
+| XLM RoBERTa base |  Thai    |      2e-5     |     16     |   10    | 02m  52s    |
 | XLM RoBERTa base | Thai-English |    8e-6   | 16         | 12     | 10m        |
 | XLM RoBERTa base | Thai-Chinese | 8e-6      | 24         | 15     | 9m 55s     |
-| XLM RoBERTa base |  Thai-English-Chinese | 8e-6 | 16     | 12     | 21m        |
-| Multilingual BERT |  Thai   |    4e-5    |    24         |     10 |     4m 51s |
+| XLM RoBERTa base |  Thai-English-Chinese | 8e-6 | 16     | 15     | 25m 31s        |
+| Multilingual BERT |  Thai   |    4e-5    |    32         |     10 |     04m 39s |
 | Multilingual BERT | Thai-English |     8e-6 |      32     |   10    |  10m 14s |
 | Multilingual BERT | Thai-Chinese |    8e-6  |      24     |   15    |  14m 43s  |
-| Multilingual BERT | Thai-English-Chinese |  8e-6 |    24      |    15    |  40m   |
+| Multilingual BERT | Thai-English-Chinese |  8e-6 |    16      |    15    |  37m 21s   |
 
 ## Results
 ### Model comparison
 | Model | Dataset |F1 Score |
 |-------|---------|---------|
 | WangchanBERTa| Thai | 0.23 |
-| XLM RoBERTa base | Thai | 0.28  |
+| XLM RoBERTa base | Thai | 0.30  |
 | XLM RoBERTa base | Thai-English | 0.55 |
 | XLM RoBERTa base | Thai-Chinese | 0.49 |
 | XLM RoBERTa base | Thai-English-Chinese | **0.87** |
-| Multilingual BERT | Thai | 0.39 |
+| Multilingual BERT | Thai | 0.38 |
 | Multilingual BERT | Thai-English | 0.51 |
 | Multilingual BERT | Thai-Chinese | 0.48 |
-| Multilingual BERT | Thai-English-Chinese | **0.88** |
+| Multilingual BERT | Thai-English-Chinese | **0.89** |
 
 According to the table, models using cross-lingual dataset from both high-resource languages give better results than those using Thai-only dataset or cross-lingual dataset using only one high-resource language. The reason is that cross-lingual data augmentation give more amount of data to train the models which leads to better efficiency of the models just like Singh et al. (2019) said in their research. For the model, XLM RoBERTa base and Multilingual BERT performed the best F1 score at 0.87 and 0.88 respectively, greatly leading WangchanBERTa with F1 score at only 0.25.
 
